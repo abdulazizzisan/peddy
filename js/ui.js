@@ -7,7 +7,7 @@ export const displayCategoryButtons = (categories) => {
         btn.classList = 'btn ctg-btn w-fit h-fit text-xl px-5 py-2 bg-transparent border-gray-300'
 
         btn.innerHTML = `
-            <img src="${category.category_icon}" alt="" class="size-[1.5rem]"> ${category.category}
+            <img src="${category.category_icon}" alt="" class="size-[1.5rem]"> <span>${category.category}<span />
         `
 
         btn.addEventListener('click', () => {

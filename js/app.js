@@ -8,12 +8,22 @@ export const loadCategories = () => {
         .catch(e => console.log("error occurred: ", e))
 }
 
-export function loadDeals(endpoint = 'pets') {
+export function loadDeals(endpoint = 'pets', sorted = false) {
     fetch(`https://openapi.programming-hero.com/api/peddy/${endpoint}`)
         .then(res => res.json())
         .then((json) => {
             ui.clearBestDeal()
-            const pets = json.pets ? json.pets : json.data
+
+            let pets = json.pets ? json.pets : json.data
+            if (sorted === true) {
+                pets = pets.sort((a, b) => {
+                    if (parseInt(a.price) < parseInt(b.price)) return -1;
+
+                    if (parseInt(a.price) > parseInt(b.price)) return 1;
+
+                    return 0;
+                })
+            }
             pets.forEach(pet => {
                 console.log(pet);
                 ui.addBestDealCard(pet)
@@ -34,8 +44,18 @@ export function loadDeals(endpoint = 'pets') {
                 })
             })
         })
-
         .catch((err) => {
             console.error("Error:::: ", err);
         })
 }
+
+document.getElementById('sort').addEventListener('click', () => {
+    if (document.querySelectorAll('.clicked').length != 0) {
+        const category = document.querySelector('.clicked').children[1].innerText
+        console.log(category);
+        loadDeals(`category/${category}`, true)
+        return;
+    }
+
+    loadDeals('pets', true)
+})
