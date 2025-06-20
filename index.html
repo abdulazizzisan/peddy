@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="shadow-sm">
+    <div class="md:w-11/12 md:mx-auto md:px-7 shadow-sm">
+        <header>
+            <nav>
+                <div class="navbar bg-base-100">
+                    <div class="navbar-start">
+                        <div class="dropdown">
+                            <!-- hamburger icon -->
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                                <li><a>Home</a></li>
+                                <li><a>Shop</a></li>
+                                <li><a>Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <img class="w-5 h-5" src="images/logo.webp" alt="">
+                            <p class="text-xl font-bold font-lato">Peddy</p>
+                        </div>
+                    </div>
+                    <div class="navbar-center hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1">
+                            <li><a>Home</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-end">
+                        <img class="rounded-full w-9" src="https://img.icons8.com/?size=50&id=7820&format=png">
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+
+            <!-- Top Banner -->
+            <section class="hero min-h-screen">
+                <div class="hero-content text-center">
+                    <div class="">
+                        <p class="py-6 text-gray-500 font-semibold text-2xl">
+                            Bringing Families Together ❤️
+                        </p>
+                        <h1 class="text-5xl font-bold">Your Path to Adoption <br>Starts Here</h1>
+                        <p class="py-6 w-2/3 mx-auto">
+                            It is a long established fact that a reader will be distracted by the readable content of a
+                            page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+                        </p>
+                        <a href="#main-section" class="btn text-xl font-light bg-[#0E7A81] text-white rounded-xl">View
+                            More</a>
+                        <img class="mx-auto" src="images/pet.webp" alt="pet image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Buttons -->
+            <section id="main-section">
+                <h1 class="text-5xl font-bold w-fit mx-auto">Adopt Your Best Friend</h1>
+                <p class="py-6 w-3/4 mx-auto">
+                    It is a long established fact that a reader will be distracted by the readable content of a
+                    page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+                </p>
+
+                <!-- button container -->
+                <div id="buttons-container" class=" mb-5 grid grid-cols-2 md:grid-cols-4 mx-auto w-fit gap-6">
+                </div>
+            </section>
+
+            <!-- Best Deals Section -->
+            <section>
+                <div class="navbar bg-base-100 mb-3">
+                    <div class="navbar-start">
+                        <p class="text-xl font-bold font-lato">Best Deals For You</p>
+                    </div>
+                    <div class="navbar-end">
+                        <button class="btn text-xl font-light bg-[#0E7A81] text-white rounded-xl">Sort</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="js/index.js" type="module"></script>
+</body>
+
+</html>
