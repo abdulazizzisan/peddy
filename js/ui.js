@@ -60,7 +60,17 @@ export function addBestDealCard(pet) {
     container.appendChild(card)
 }
 
-export function showModal(pet){
+export function showNoItems() {
+    const container = document.getElementById('deals')
+    container.classList = `md:col-span-3 min-h-36 rounded-xl border-gray-500 shadow-sm p-10`
+
+    container.innerHTML = `
+    <img class='mx-auto' src='../images/error.webp' />
+    <p class='text-5xl w-fit mx-auto'>No pets found in this category<p />
+    `
+}
+
+export function showModal(pet) {
     document.getElementById('my_modal_1').innerHTML = `
                 <div class="modal-box">
                 <img class='mx-auto' src="${pet.image}">
@@ -78,7 +88,7 @@ export function showModal(pet){
     my_modal_1.showModal()
 }
 
-export function addToFav(pet){
+export function addToFav(pet) {
     const image = document.createElement('img')
     image.src = pet.image
     image.classList = 'mb-0 p-0'

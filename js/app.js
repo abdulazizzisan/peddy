@@ -15,6 +15,11 @@ export function loadDeals(endpoint = 'pets', sorted = false) {
             ui.clearBestDeal()
 
             let pets = json.pets ? json.pets : json.data
+
+            if(pets.length <= 0){
+                ui.showNoItems()
+                return;
+            }
             if (sorted === true) {
                 pets = pets.sort((a, b) => {
                     if (parseInt(a.price) < parseInt(b.price)) return -1;
