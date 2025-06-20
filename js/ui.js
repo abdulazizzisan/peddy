@@ -62,11 +62,10 @@ export function addBestDealCard(pet) {
 
 export function showNoItems() {
     const container = document.getElementById('deals')
-    container.classList = `md:col-span-3 min-h-36 rounded-xl border-gray-500 shadow-sm p-10`
-
+    
     container.innerHTML = `
-    <img class='mx-auto' src='../images/error.webp' />
-    <p class='text-5xl w-fit mx-auto'>No pets found in this category<p />
+    <img class='md:col-span-3 mx-auto' src='../images/error.webp' />
+    <p class='text-5xl md:col-span-3 w-fit mx-auto'>No pets found in this category<p />
     `
 }
 
